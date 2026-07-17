@@ -81,7 +81,7 @@ bash scripts/web_fetch.sh "https://example.com/article"
 使用前需设置 `IFLOW_API_KEY` 环境变量。在调用任何搜索能力之前，必须先检查该环境变量是否已设置：
 
 ```bash
-echo "$IFLOW_API_KEY"
+[[ -n "${IFLOW_API_KEY:-}" ]]
 ```
 
 如果为空，提示用户：
